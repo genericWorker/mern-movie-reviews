@@ -1,0 +1,17 @@
+npx create-react-app mern-moviereview-tracker
+npm init -y
+npm install express cors mongoose dotenv
+npm install nodemon -g
+
+
+Native connection to Atlas
+adminuser
+
+const { MongoClient } = require('mongodb');
+const uri = "mongodb+srv://genericworker:<password>@cluster0.ggu9k.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
+client.connect(err => {
+  const collection = client.db("test").collection("devices");
+  // perform actions on the collection object
+  client.close();
+});
