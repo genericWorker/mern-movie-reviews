@@ -13,7 +13,7 @@ console.log('uri' + uri);
 app.use(cors());
 app.use(express.json());
 
-mongoose.connect(uri, {useNewUrlParser: true, useCreateIndex: true}); 
+mongoose.connect(uri); 
 const connection = mongoose.connection; 
 connection.once('open', ()  => {
     console.log("MongoDB database connection established successfully"); 
